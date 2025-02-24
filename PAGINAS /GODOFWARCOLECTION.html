@@ -1,76 +1,90 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+
+<!DOCTYPE html><html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>God of War Collection PT-BR - Página de Visualização</title>
+    <title>God of War Collection PT-BR</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
             background: url('godofwarcolection.jpg') no-repeat center center/cover;
             color: white;
             text-align: center;
             font-family: Arial, sans-serif;
-            margin: 0;
-            height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-direction: column;
+            height: 100vh;
         }
         .container {
-            background: rgba(0, 0, 0, 0.7);
-            padding: 30px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
         }
         h1 {
-            font-size: 24px;
+            font-size: 20px;
             margin-bottom: 20px;
         }
         .buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
             margin-top: 20px;
         }
+        .buttons a {
+            text-decoration: none;
+            margin: 10px;
+        }
         .buttons button {
-            background: red;
-            color: white;
+            background: white;
+            color: black;
             border: none;
-            padding: 15px 25px;
+            padding: 10px 20px;
+            font-size: 16px;
             cursor: pointer;
-            font-size: 18px;
-            font-weight: bold;
             border-radius: 5px;
-            transition: background 0.3s;
         }
         .buttons button:hover {
-            background: darkred;
+            background: gray;
+        }
+        .trailer {
+            margin-top: 20px;
+            background: red;
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .trailer a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
         }
         .copyright {
             margin-top: 20px;
             font-size: 12px;
-            background: rgba(0, 0, 0, 0.6);
-            padding: 10px;
-            border-radius: 5px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>VEJA O TRAILER DO JOGO</h1>
+        <h1>COLOQUE SUA SENHA E SALVE NA PASTA PS3ISO</h1>
         <div class="buttons">
-            <!-- Link de navegação para a página do trailer -->
-            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
-                <button>Assistir Trailer</button>
+            <a href="GODOFWARPACK.zip" download>
+                <button>Download</button>
             </a>
-            <!-- Botão que não faz download, apenas simula ação de download -->
-            <a href="#">
-                <button>Baixar (Simulado)</button>
+            <a href="TRADUCAO.zip" download>
+                <button>Download: Tradução</button>
             </a>
         </div>
         <div class="copyright">
-            <p>Copyright 2025 &copy; DL GAMES</p>
+            <p>Copyright 2025 &copy; DL GAMES VIP</p>
             <p>Todos os direitos reservados</p>
+        </div>
+        <div class="trailer">
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Assistir Game Play Trailer</a>
         </div>
     </div>
 </body>
