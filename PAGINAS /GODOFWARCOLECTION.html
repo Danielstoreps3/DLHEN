@@ -11,32 +11,27 @@
             box-sizing: border-box;
         }
         body {
-            background: url('IMG/GODOFWARCOLECTION.jpg') no-repeat center center/cover;
+            background: url('IMG/GODOFWARCOLECTION.jpg') no-repeat center center fixed; /* Garantir que o fundo esteja fixo e ocupe toda a tela */
+            background-size: cover;
             color: white;
-            text-align: center;
             font-family: Arial, sans-serif;
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-direction: column;
-            height: 100vh;
-            background-size: cover;
+            height: 100vh; /* Ocupa toda a altura da tela */
         }
         .container {
-            background: rgba(0, 0, 0, 0.7); /* Fundo mais escuro para contraste */
+            background: rgba(0, 0, 0, 0.7); /* Fundo escuro para melhorar a legibilidade */
             padding: 20px;
             border-radius: 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            max-width: 500px;
-            width: 90%; /* Ajusta para telas menores */
+            width: 80%; /* Garantir que o container tenha uma largura boa em diferentes telas */
+            max-width: 600px; /* Limita a largura máxima do container */
+            text-align: center;
         }
         h1 {
-            font-size: 20px;
+            font-size: 22px;
             margin-bottom: 20px;
-            word-wrap: break-word; /* Quebra a linha se necessário */
+            word-wrap: break-word;
         }
         .buttons {
             display: flex;
@@ -51,11 +46,12 @@
             background: white;
             color: black;
             border: none;
-            padding: 12px 25px;
+            padding: 12px 20px;
             font-size: 18px;
             cursor: pointer;
             border-radius: 5px;
-            width: 250px;
+            width: 80%; /* Ajuste a largura do botão para que ele se adapte bem */
+            max-width: 250px; /* Limite máximo para a largura */
         }
         .buttons button:hover {
             background: gray;
