@@ -1,315 +1,349 @@
 
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-	<title>DL GAMES HEN</title>
-	<meta content="width=device-width, initial-scale=1" name="viewport" />
-	<style type="text/css">body {
-    margin: 0;
-    padding: 0;
-}
-html {
-    background-image: url("IMG/fundo.png");
-}
-.container {
-    margin: 20px auto;
-    width: 95%;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DL GAMES HEN</title>
+
+<style>
+* {
+    box-sizing: border-box;
 }
 
-/* general styles */
-.menu, .menu ul {
-    list-style: none;
-    padding: 0;
+body {
     margin: 0;
+    padding: 0;
+    background: #080e19;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+header {
+    background: linear-gradient(135deg, #071c35, #064b80);
+    border-bottom: 3px solid #00aaff;
+    padding: 28px 15px;
+    text-align: center;
+}
+
+.logo {
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 0 0 12px #00aaff;
+}
+
+.logo span {
+    color: #00bfff;
+}
+
+.subtitle {
+    color: #b9d9ed;
+    font-size: 13px;
+    margin-top: 9px;
+}
+
 .menu {
-    height: 58px;
+    background: #101b2b;
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #203c5c;
 }
-.menu li {
-    background: -moz-linear-gradient(#00BFFF, #363636);
-    background: -ms-linear-gradient(#00BFFF, #ff0000);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #292929), color-stop(100%, #363636));
-    background: -webkit-linear-gradient(#00BFFF, #363636);
-    background: -o-linear-gradient(#00BFFF, #363636);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#292929', endColorstr='#363636');
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#292929', endColorstr='#363636')";
-    background: linear-gradient(#00BFFF, #363636);
 
-    border-bottom: 2px solid #00000;
-    border-top: 2px solid #000000;
-    min-width: 160px;
-}
-.menu > li {
-    display: block;
-    float: left;
-    position: relative;
-}
-.menu > li:first-child {
-    border-radius: 5px 0 0;
-}
 .menu a {
-    border-left: 1px solid rgba(0, 0, 0, 0);
-    color: #000000;
-    display: block;
-    font-family: 'Lucida Console';
-    font-size: 18px;
-    line-height: 54px;
-    padding: 0 25px;
+    display: inline-block;
+    color: #dcecff;
     text-decoration: none;
-    text-transform: uppercase;
+    padding: 10px 14px;
+    font-size: 13px;
+    font-weight: bold;
 }
 
-/* onhover styles */
-.menu li:hover {
-    background-color: #DCDCDC;
-    background: -moz-linear-gradient(#DCDCDC, #DCDCDC);
-    background: -ms-linear-gradient(#1c1c1c, #000000);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1c1c1c), color-stop(100%, #FF0000));
-    background: -webkit-linear-gradient(#1c1c1c, #000000);
-    background: -o-linear-gradient(#1c1c1c, #FF0000);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1c1c1c', endColorstr='#000000');
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#1c1c1c', endColorstr='#FF0000')";
-    background: linear-gradient(#1c1c1c, #1b1b1b);
-
-    border-bottom: 2px solid #000000;
-    border-top: 2px solid #1B1B1B;
-}
-.menu li:hover > a {
-    border-radius: 5px 0 0 0;
-    border-left: 3px solid #C4302B;
-    color: #DCDCDC;
+.menu a:hover {
+    color: #00bfff;
 }
 
-/* submenu styles */
-.submenu {
-    left: 0;
-    max-height: 0;
-    position: absolute;
-    top: 100%;
-    z-index: 0;
-
-    -webkit-perspective: 400px;
-    -moz-perspective: 400px;
-    -ms-perspective: 400px;
-    -o-perspective: 400px;
-    perspective: 400px;
-}
-.submenu li {
-    opacity: 0;
-
-    -webkit-transform: rotateY(90deg);
-    -moz-transform: rotateY(90deg);
-    -ms-transform: rotateY(90deg);
-    -o-transform: rotateY(90deg);
-    transform: rotateY(90deg);
-
-    -webkit-transition: opacity .4s, -webkit-transform .5s;
-    -moz-transition: opacity .4s, -moz-transform .5s;
-    -ms-transition: opacity .4s, -ms-transform .5s;
-    -o-transition: opacity .4s, -o-transform .5s;
-    transition: opacity .4s, transform .5s;
-}
-.menu .submenu li:hover a {
-    border-left: 3px solid #000000;
-    border-radius: 0;
-    color: #000000;
-}
-.menu > li:hover .submenu, .menu > li:focus .submenu {
-    max-height: 2000px;
-    z-index: 10;
-}
-.menu > li:hover .submenu li, .menu > li:focus .submenu li {
-    opacity: 1;
-
-    -webkit-transform: none;
-    -moz-transform: none;
-    -ms-transform: none;
-    -o-transform: none;
-    transform: none;
+.container {
+    width: 94%;
+    max-width: 1100px;
+    margin: 25px auto;
 }
 
-/* CSS3 delays for transition effects */
-.menu li:hover .submenu li:nth-child(1) {
-    -webkit-transition-delay: 0ms;
-    -moz-transition-delay: 0ms;
-    -ms-transition-delay: 0ms;
-    -o-transition-delay: 0ms;
-    transition-delay: 0ms;
+.welcome {
+    background: linear-gradient(120deg, #102b49, #102039);
+    border: 1px solid #20517c;
+    border-radius: 10px;
+    padding: 22px;
+    margin-bottom: 28px;
 }
-.menu li:hover .submenu li:nth-child(2) {
-    -webkit-transition-delay: 50ms;
-    -moz-transition-delay: 50ms;
-    -ms-transition-delay: 50ms;
-    -o-transition-delay: 50ms;
-    transition-delay: 50ms;
+
+.welcome h2 {
+    margin: 0 0 10px;
+    color: #00bfff;
+    font-size: 22px;
 }
-.menu li:hover .submenu li:nth-child(3) {
-    -webkit-transition-delay: 100ms;
-    -moz-transition-delay: 100ms;
-    -ms-transition-delay: 100ms;
-    -o-transition-delay: 100ms;
-    transition-delay: 100ms;
+
+.welcome p {
+    color: #c4d4e5;
+    line-height: 1.6;
+    font-size: 14px;
+    margin-bottom: 0;
 }
-.menu li:hover .submenu li:nth-child(4) {
-    -webkit-transition-delay: 150ms;
-    -moz-transition-delay: 150ms;
-    -ms-transition-delay: 150ms;
-    -o-transition-delay: 150ms;
-    transition-delay: 150ms;
+
+.section-title {
+    color: #00bfff;
+    font-size: 19px;
+    border-left: 4px solid #00bfff;
+    padding: 8px 12px;
+    margin: 30px 0 15px;
+    background: #101d2e;
 }
-.menu li:hover .submenu li:nth-child(5) {
-    -webkit-transition-delay: 200ms;
-    -moz-transition-delay: 200ms;
-    -ms-transition-delay: 200ms;
-    -o-transition-delay: 200ms;
-    transition-delay: 200ms;
+
+.cards {
+    text-align: center;
 }
-.menu li:hover .submenu li:nth-child(6) {
-    -webkit-transition-delay: 250ms;
-    -moz-transition-delay: 250ms;
-    -ms-transition-delay: 250ms;
-    -o-transition-delay: 250ms;
-    transition-delay: 250ms;
+
+.card {
+    display: inline-block;
+    vertical-align: top;
+    width: 31%;
+    min-width: 220px;
+    background: #111d2d;
+    border: 1px solid #263d58;
+    border-radius: 9px;
+    margin: 0 0.7% 15px;
+    padding: 17px;
+    text-align: left;
 }
-.menu li:hover .submenu li:nth-child(7) {
-    -webkit-transition-delay: 300ms;
-    -moz-transition-delay: 300ms;
-    -ms-transition-delay: 300ms;
-    -o-transition-delay: 300ms;
-    transition-delay: 300ms;
+
+.card h3 {
+    color: #fff;
+    font-size: 16px;
+    margin: 0 0 8px;
 }
-.menu li:hover .submenu li:nth-child(8) {
-    -webkit-transition-delay: 350ms;
-    -moz-transition-delay: 350ms;
-    -ms-transition-delay: 350ms;
-    -o-transition-delay: 350ms;
-    transition-delay: 350ms;
+
+.card p {
+    color: #9eb4ca;
+    font-size: 12px;
+    line-height: 1.5;
+    min-height: 30px;
 }
-.menu li:hover .submenu li:nth-child(9) {
-    -webkit-transition-delay: 400ms;
-    -moz-transition-delay: 400ms;
-    -ms-transition-delay: 400ms;
-    -o-transition-delay: 400ms;
-    transition-delay: 400ms;
+
+.btn {
+    display: block;
+    background: #087ac0;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    padding: 12px 8px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 9px;
 }
-      
-.submenu li:nth-child(1) {
-    -webkit-transition-delay: 400ms;
-    -moz-transition-delay: 400ms;
-    -ms-transition-delay: 400ms;
-    -o-transition-delay: 400ms;
-    transition-delay: 400ms;
+
+.btn:hover {
+    background: #00aaff;
+    color: #001323;
 }
-.submenu li:nth-child(2) {
-    -webkit-transition-delay: 350ms;
-    -moz-transition-delay: 350ms;
-    -ms-transition-delay: 350ms;
-    -o-transition-delay: 350ms;
-    transition-delay: 350ms;
+
+.btn.secondary {
+    background: #20364e;
 }
-.submenu li:nth-child(3) {
-    -webkit-transition-delay: 300ms;
-    -moz-transition-delay: 300ms;
-    -ms-transition-delay: 300ms;
-    -o-transition-delay: 300ms;
-    transition-delay: 300ms;
+
+.btn.secondary:hover {
+    background: #315b80;
+    color: #fff;
 }
-.submenu li:nth-child(4) {
-    -webkit-transition-delay: 250ms;
-    -moz-transition-delay: 250ms;
-    -ms-transition-delay: 250ms;
-    -o-transition-delay: 250ms;
-    transition-delay: 250ms;
+
+.tag {
+    display: inline-block;
+    background: #063c60;
+    color: #69d4ff;
+    font-size: 10px;
+    padding: 5px 8px;
+    border-radius: 4px;
+    margin-bottom: 10px;
 }
-.submenu li:nth-child(5) {
-    -webkit-transition-delay: 200ms;
-    -moz-transition-delay: 200ms;
-    -ms-transition-delay: 200ms;
-    -o-transition-delay: 200ms;
-    transition-delay: 200ms;
+
+footer {
+    margin-top: 35px;
+    padding: 25px 10px;
+    text-align: center;
+    background: #0d1725;
+    border-top: 1px solid #203c5c;
+    color: #8299b0;
+    font-size: 12px;
 }
-.submenu li:nth-child(6) {
-    -webkit-transition-delay: 150ms;
-    -moz-transition-delay: 150ms;
-    -ms-transition-delay: 150ms;
-    -o-transition-delay: 150ms;
-    transition-delay: 150ms;
+
+@media screen and (max-width: 700px) {
+    .card {
+        width: 100%;
+        margin: 0 0 14px;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .menu a {
+        padding: 9px 7px;
+        font-size: 11px;
+    }
 }
-.submenu li:nth-child(7) {
-    -webkit-transition-delay: 100ms;
-    -moz-transition-delay: 100ms;
-    -ms-transition-delay: 100ms;
-    -o-transition-delay: 100ms;
-    transition-delay: 100ms;
-}
-.submenu li:nth-child(8) {
-    -webkit-transition-delay: 50ms;
-    -moz-transition-delay: 50ms;
-    -ms-transition-delay: 50ms;
-    -o-transition-delay: 50ms;
-    transition-delay: 50ms;
-}
-.submenu li:nth-child(9) {
-    -webkit-transition-delay: 0ms;
-    -moz-transition-delay: 0ms;
-    -ms-transition-delay: 0ms;
-    -o-transition-delay: 0ms;
-    transition-delay: 0ms;
-}
-	</style>
+</style>
 </head>
-<body class="bg">
-<div class="container" id="main" role="main">
-<ul class="menu">
-	<li><a href="#s1">HEN 4.92</a>
-	<ul class="submenu">
-		<li><a href="http://ps3xploit.me/hen/installer/index.html">AUTO HEN 4.92</a></li>
-		<li><a href="https://github.com/Danielstoreps3/DLHEN/releases/download/DLHEN/HFW_4.92.1_PS3UPDAT.PUP">HFW 4.92</a></li>
-	</ul>
-	</li>
-	<li><a href="#s1">HEN 4.91</a>
-	<ul class="submenu">
-		<li><a href="https://ps3addict.github.io/autohen/4.91/index.html">AUTO HEN 4.91</a></li>
-		<li><a href="https://danielstorevip.danielstorevip.workers.dev/5:/DESBLOQUEIO/HFW%204.91/PS3UPDAT.PUP">HFW 4.91</a></li>
-	</ul>
-	</li>
-	<li><a href="#s1">HEN 4.90</a>
-	<ul class="submenu">
-		<li><a href="https://ps3addict.github.io/autohen/4.91/index.html">AUTO HEN INSTALLER</a></li>
-		<li><a href="https://danielstorevip.danielstorevip.workers.dev/5:/DESBLOQUEIO/HFW%204.90/PS3UPDAT.PUP">HFW 4.90</a></li>
-	</ul>
-	</li>
-	<li><a href="#s1">DL FERRAMENTAS 1.5</a>
-	<ul class="submenu">
-		<li><a href="https://github.com/5151">DL FERRAMENTAS 1.5</a></li>
-		<li><a href="https://github.com/5151">FIX 4.92</a></li>
-		<li><a href="https://github.com/5151">FIX 4.91</a></li>
-	    <li><a href="https://github.com/5151">FIX 4.90</a></li>
-	</ul>
-	</li>
-	<li><a href="#s2">DL GAMES OFICIAL</a>
-	<ul class="submenu">
-		<li><a href="https://dlgames1k.blogspot.com">BLOG OFICIAL</a></li>
-		<li><a href="https://archive.org/download/imagem-do-whats-app-de-2025-03-11-as-12.11.04-331a-0794/Imagem%20do%20WhatsApp%20de%202025-03-11%20%C3%A0%28s%29%2012.11.04_331a0794.jpg">WHATSAPP OFICIAL</a></li>
-		<li><a href="https://archive.org/download/dl-games-ytb-2025/Imagem%20do%20WhatsApp%20de%202025-03-11%20%C3%A0%28s%29%2012.03.32_70ca59eb.jpg">YOUTUBE OFICIAL</a></li>
-	</ul>
-	</li>
-	<li><a href="#s2">APLICATIVOS</a>
-	<ul class="submenu">
-		<li><a href="https://danielstorevip.danielstorevip.workers.dev/5:/DESBLOQUEIO/HOMEBREWS/MultiMAN_04.85.01_BASE_By_DLGAMESpkg">MULTIMAN</a></li>
-		<li><a href="https://danielstorevip.danielstorevip.workers.dev/5:/DESBLOQUEIO/HOMEBREWS/webMAN_MOD_1.47.46_By_DLGAMES.pkg.436.v1.47.46b_brewology_com.pkg">WEBMAN MOD</a></li>
-		<li><a href="https://danielstorevip.danielstorevip.workers.dev/5:/DESBLOQUEIO/HOMEBREWS/IRISMAN_4.91.pkg.213.v4.91_By_DLGAMES.pkg">IRISMAN</a></li>
-		<li><a href="https://danielstorevip.danielstorevip.workers.dev/5:/DESBLOQUEIO/HOMEBREWS/APOLLO_By_DLGAMES.pkg">APOLLO</a></li>
-		<li><a href="https://danielstorevip.danielstorevip.workers.dev/5:/DESBLOQUEIO/HOMEBREWS/MOVIAN_M7-7.0.31By_DLGAMES.pkg">MOVIAN</a></li>
-		<li><a href="https://danielstorevip.danielstorevip.workers.dev/5:/DESBLOQUEIO/HOMEBREWS/PKGI_By_DLGAMES.pkg">PKGI</a></li>
-	</ul>
-	<li><a href="#s2">LICENÇAS</a>
-	<ul class="submenu">
-		<li><a href="https://danielstorevip.danielstorevip.workers.dev/5:/DESBLOQUEIO/HOMEBREWS/15MIL_Licencias.pkg">15 MIL LICENÇAS</a></li>
-	</ul>
-	</li>
-	</li>
-</ul>
+
+<body>
+
+<header>
+    <div class="logo">DL <span>GAMES</span> HEN</div>
+    <div class="subtitle">CENTRAL DE DOWNLOADS E FERRAMENTAS PARA PS3</div>
+</header>
+
+<nav class="menu">
+    <a href="#hen">HEN / HFW</a>
+    <a href="#ferramentas">FERRAMENTAS</a>
+    <a href="#oficial">OFICIAL</a>
+    <a href="#apps">APLICATIVOS</a>
+    <a href="#licencas">LICENÇAS</a>
+</nav>
+
+<div class="container">
+
+    <div class="welcome">
+        <h2>SEJA BEM-VINDO!</h2>
+        <p>
+            Bem-vindo ao DL GAMES HEN! Aqui você encontra
+            ferramentas, atualizações, aplicativos e conteúdos
+            para seu PlayStation 3.
+        </p>
+    </div>
+
+    <div class="section-title" id="hen">01 — HEN E FIRMWARE</div>
+
+    <div class="cards">
+
+        <div class="card">
+            <span class="tag">VERSÃO 4.92</span>
+            <h3>HEN 4.92</h3>
+            <p>Instalador e firmware para a versão 4.92.</p>
+            <a class="btn" href="http://ps3xploit.me/hen/installer/index.html">AUTO HEN 4.92</a>
+            <a class="btn secondary" href="https://github.com/Danielstoreps3/DLHEN/releases/download/DLHEN/HFW_4.92.1_PS3UPDAT.PUP">BAIXAR HFW 4.92</a>
+        </div>
+
+        <div class="card">
+            <span class="tag">VERSÃO 4.91</span>
+            <h3>HEN 4.91</h3>
+            <p>Instalador e firmware para a versão 4.91.</p>
+            <a class="btn" href="https://ps3addict.github.io/autohen/4.91/index.html">AUTO HEN 4.91</a>
+            <a class="btn secondary" href="https://danielstorevip.danielstorevip.workers.dev/5:/DESBLOQUEIO/HFW%204.91/PS3UPDAT.PUP">BAIXAR HFW 4.91</a>
+        </div>
+
+        <div class="card">
+            <span class="tag">VERSÃO 4.90</span>
+            <h3>HEN 4.90</h3>
+            <p>Instalador e firmware para a versão 4.90.</p>
+            <a class="btn" href="https://ps3addict.github.io/autohen/4.91/index.html">AUTO HEN INSTALLER</a>
+            <a class="btn secondary" href="https://danielstorevip.danielstorevip.workers.dev/5:/DESBLOQUEIO/HFW%204.90/PS3UPDAT.PUP">BAIXAR HFW 4.90</a>
+        </div>
+
+    </div>
+
+    <div class="section-title" id="ferramentas">02 — FERRAMENTAS</div>
+
+    <div class="cards">
+        <div class="card">
+            <span class="tag">UTILITÁRIOS</span>
+            <h3>DL FERRAMENTAS 1.5</h3>
+            <p>Ferramentas e correções para seu console.</p>
+            <a class="btn" href="https://github.com/5151">DL FERRAMENTAS 1.5</a>
+            <a class="btn secondary" href="https://github.com/5151">FIX 4.92</a>
+            <a class="btn secondary" href="https://github.com/5151">FIX 4.91</a>
+            <a class="btn secondary" href="https://github.com/5151">FIX 4.90</a>
+        </div>
+    </div>
+
+    <div class="section-title" id="oficial">03 — DL GAMES OFICIAL</div>
+
+    <div class="cards">
+        <div class="card">
+            <span class="tag">COMUNIDADE</span>
+            <h3>ACOMPANHE O DL GAMES</h3>
+            <p>Acesse nossos canais oficiais.</p>
+            <a class="btn" href="https://dlgames1k.blogspot.com">BLOG OFICIAL</a>
+            <a class="btn secondary" href="https://archive.org/download/imagem-do-whats-app-de-2025-03-11-as-12.11.04-331a-0794/Imagem%20do%20WhatsApp%20de%202025-03-11%20%C3%A0%28s%29%2012.11.04_331a0794.jpg">WHATSAPP OFICIAL</a>
+            <a class="btn secondary" href="https://archive.org/download/dl-games-ytb-2025/Imagem%20do%20WhatsApp%20de%202025-03-11%20%C3%A0%28s%29%2012.03.32_70ca59eb.jpg">YOUTUBE OFICIAL</a>
+        </div>
+    </div>
+
+    <div class="section-title" id="apps">04 — APLICATIVOS PS3</div>
+
+    <div class="cards">
+
+        <div class="card">
+            <span class="tag">HOMEBREWS</span>
+            <h3>MULTIMAN</h3>
+            <p>Gerenciador de jogos e arquivos.</p>
+            <a class="btn" href="https://danielstorevip.danielstorevip.workers.dev/5:/DESBLOQUEIO/HOMEBREWS/MultiMAN_04.85.01_BASE_By_DLGAMESpkg">BAIXAR MULTIMAN</a>
+        </div>
+
+        <div class="card">
+            <span class="tag">HOMEBREWS</span>
+            <h3>WEBMAN MOD</h3>
+            <p>Gerenciamento e funções extras.</p>
+            <a class="btn" href="https://danielstorevip.danielstorevip.workers.dev/5:/DESBLOQUEIO/HOMEBREWS/webMAN_MOD_1.47.46_By_DLGAMES.pkg.436.v1.47.46b_brewology_com.pkg">BAIXAR WEBMAN</a>
+        </div>
+
+        <div class="card">
+            <span class="tag">HOMEBREWS</span>
+            <h3>IRISMAN</h3>
+            <p>Gerenciador alternativo para PS3.</p>
+            <a class="btn" href="https://danielstorevip.danielstorevip.workers.dev/5:/DESBLOQUEIO/HOMEBREWS/IRISMAN_4.91.pkg.213.v4.91_By_DLGAMES.pkg">BAIXAR IRISMAN</a>
+        </div>
+
+        <div class="card">
+            <span class="tag">HOMEBREWS</span>
+            <h3>APOLLO</h3>
+            <p>Ferramenta de gerenciamento de saves.</p>
+            <a class="btn" href="https://danielstorevip.danielstorevip.workers.dev/5:/DESBLOQUEIO/HOMEBREWS/APOLLO_By_DLGAMES.pkg">BAIXAR APOLLO</a>
+        </div>
+
+        <div class="card">
+            <span class="tag">HOMEBREWS</span>
+            <h3>MOVIAN</h3>
+            <p>Aplicativo de mídia para PS3.</p>
+            <a class="btn" href="https://danielstorevip.danielstorevip.workers.dev/5:/DESBLOQUEIO/HOMEBREWS/MOVIAN_M7-7.0.31By_DLGAMES.pkg">BAIXAR MOVIAN</a>
+        </div>
+
+        <div class="card">
+            <span class="tag">HOMEBREWS</span>
+            <h3>PKGI</h3>
+            <p>Aplicativo de catálogo para PS3.</p>
+            <a class="btn" href="https://danielstorevip.danielstorevip.workers.dev/5:/DESBLOQUEIO/HOMEBREWS/PKGI_By_DLGAMES.pkg">BAIXAR PKGI</a>
+        </div>
+
+    </div>
+
+    <div class="section-title" id="licencas">05 — LICENÇAS</div>
+
+    <div class="cards">
+        <div class="card">
+            <span class="tag">PACOTE</span>
+            <h3>15 MIL LICENÇAS</h3>
+            <p>Pacote de licenças para seu console.</p>
+            <a class="btn" href="https://danielstorevip.danielstorevip.workers.dev/5:/DESBLOQUEIO/HOMEBREWS/15MIL_Licencias.pkg">BAIXAR LICENÇAS</a>
+        </div>
+    </div>
+
 </div>
+
+<footer>
+    DL GAMES HEN © 2026
+    <br><br>
+    TODOS OS DIREITOS RESERVADOS
+</footer>
+
 </body>
 </html>
