@@ -1,452 +1,300 @@
 
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>DL GAMES HEN</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<style>
-* {
-    box-sizing: border-box;
-}
+<style type="text/css">
 
 body {
     margin: 0;
     padding: 0;
-    background: #070c16;
-    color: #fff;
-    font-family: Arial, sans-serif;
+    background: #080f1b;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-header {
-    background: #0b1930;
-    border-bottom: 3px solid #00aaff;
+.header {
+    background: #102744;
+    border-bottom: 3px solid #0088cc;
     padding: 25px 10px;
     text-align: center;
 }
 
 .logo {
-    font-size: 32px;
+    font-size: 30px;
     font-weight: bold;
-    letter-spacing: 3px;
-    color: white;
-    text-shadow: 0 0 12px #008cff;
+    color: #ffffff;
 }
 
 .logo span {
-    color: #00baff;
+    color: #00aaff;
 }
 
-.subtitle {
-    color: #9bbbd5;
-    font-size: 11px;
+.subtitulo {
+    font-size: 12px;
+    color: #b5cce0;
     margin-top: 8px;
-    letter-spacing: 2px;
 }
 
 .menu {
-    background: #101d31;
-    border-bottom: 1px solid #17436b;
+    background: #142338;
+    padding: 14px 5px;
     text-align: center;
-    padding: 8px 4px;
+    border-bottom: 1px solid #245078;
 }
 
 .menu a {
-    display: inline-block;
-    padding: 12px 10px;
-    color: #d8eaff;
-    font-size: 12px;
-    font-weight: bold;
+    color: #ffffff;
     text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 10px;
+    display: inline-block;
 }
 
-.menu a:hover {
-    color: #00baff;
-    background: #162d49;
+.conteudo {
+    width: 94%;
+    margin: 20px auto;
 }
 
 .banner {
-    margin: 22px auto;
-    width: 94%;
-    max-width: 1100px;
-    padding: 25px;
-    background: #102745;
-    border: 1px solid #087dbb;
-    border-radius: 9px;
+    background: #102744;
+    border: 1px solid #17639a;
+    padding: 20px;
+    margin-bottom: 25px;
 }
 
 .banner h2 {
-    margin: 0 0 10px;
-    color: #00baff;
-    font-size: 23px;
+    color: #00aaff;
+    margin-top: 0;
+    font-size: 22px;
 }
 
 .banner p {
-    color: #c5d8eb;
+    color: #d0dce8;
     font-size: 14px;
-    line-height: 1.6;
+    line-height: 22px;
 }
 
-.banner .status {
-    display: inline-block;
-    color: #70e7a0;
-    background: #103b32;
-    padding: 7px 11px;
-    border-radius: 4px;
-    font-size: 11px;
-    font-weight: bold;
-}
-
-.container {
-    width: 94%;
-    max-width: 1100px;
-    margin: auto;
-}
-
-.section-title {
-    margin: 30px 0 15px;
+.titulo {
+    background: #142b46;
+    border-left: 4px solid #0099dd;
     padding: 12px;
-    background: #10213a;
-    border-left: 4px solid #00baff;
+    margin-top: 25px;
+    margin-bottom: 15px;
     color: #00baff;
     font-size: 17px;
     font-weight: bold;
 }
 
-.cards {
-    text-align: center;
-}
-
 .card {
-    display: inline-block;
-    vertical-align: top;
-    width: 31%;
-    min-width: 220px;
-    margin: 0 0.7% 16px;
-    padding: 18px;
-    background: #101b2b;
-    border: 1px solid #243c59;
-    border-radius: 9px;
-    text-align: left;
-}
-
-.card:hover {
-    border-color: #00aaff;
-    background: #14263d;
-}
-
-.card-icon {
-    font-size: 29px;
-    margin-bottom: 12px;
+    float: left;
+    width: 29%;
+    margin: 1%;
+    padding: 1%;
+    background: #111e30;
+    border: 1px solid #294663;
+    min-height: 155px;
 }
 
 .card h3 {
-    margin: 0 0 9px;
+    color: #ffffff;
     font-size: 16px;
-    color: #fff;
+    margin-top: 5px;
 }
 
 .card p {
-    color: #9eb3c9;
+    color: #aebfd0;
     font-size: 12px;
-    line-height: 1.5;
-    min-height: 32px;
+    line-height: 18px;
 }
 
-.tag {
-    display: inline-block;
-    color: #64d8ff;
-    background: #073655;
-    padding: 5px 8px;
-    border-radius: 4px;
-    font-size: 10px;
-    margin-bottom: 12px;
-}
-
-.btn {
+.botao {
     display: block;
-    padding: 12px 8px;
-    margin-top: 9px;
-    border-radius: 5px;
-    background: #087bbd;
-    color: white;
+    background: #086da8;
+    color: #ffffff;
     text-decoration: none;
     text-align: center;
+    padding: 11px 5px;
+    margin-top: 8px;
     font-size: 12px;
     font-weight: bold;
 }
 
-.btn:hover {
-    background: #00aaff;
-    color: #001323;
-}
-
-.btn.secondary {
-    background: #20364f;
-}
-
-.btn.secondary:hover {
-    background: #315b80;
-    color: white;
-}
-
-.search-box {
-    width: 100%;
-    padding: 14px;
-    background: #101b2b;
-    border: 1px solid #28618a;
-    border-radius: 6px;
-    color: white;
-    font-size: 14px;
-    margin: 5px 0 18px;
-}
-
-.search-box:focus {
-    border-color: #00baff;
-    outline: none;
-}
-
-.empty {
-    display: none;
-    color: #9eb3c9;
+.botao2 {
+    display: block;
+    background: #263d56;
+    color: #ffffff;
+    text-decoration: none;
     text-align: center;
-    padding: 20px;
+    padding: 11px 5px;
+    margin-top: 8px;
+    font-size: 12px;
+    font-weight: bold;
 }
 
-footer {
-    margin-top: 40px;
-    padding: 25px 10px;
-    background: #0d1725;
+.limpar {
+    clear: both;
+    height: 1px;
+}
+
+.rodape {
+    background: #101d2d;
     border-top: 2px solid #087bbd;
+    padding: 25px 10px;
+    margin-top: 35px;
     text-align: center;
-    color: #819bb5;
+    color: #aabaca;
     font-size: 12px;
 }
 
-footer strong {
-    color: #00baff;
+.rodape strong {
+    color: #00aaff;
 }
 
-@media screen and (max-width: 700px) {
-    .card {
-        width: 100%;
-        margin: 0 0 14px;
-    }
-
-    .logo {
-        font-size: 25px;
-    }
-
-    .menu a {
-        padding: 10px 6px;
-        font-size: 10px;
-    }
-}
 </style>
 </head>
 
 <body>
 
-<header>
+<div class="header">
     <div class="logo">DL <span>GAMES</span> HEN</div>
-    <div class="subtitle">O UNIVERSO DO SEU PLAYSTATION 3</div>
-</header>
+    <div class="subtitulo">CENTRAL DE CONTEUDOS PARA PLAYSTATION 3</div>
+</div>
 
 <div class="menu">
-    <a href="#inicio">⌂ INÍCIO</a>
+    <a href="#inicio">INICIO</a>
     <a href="#hen">HEN</a>
     <a href="#ferramentas">FERRAMENTAS</a>
     <a href="#oficial">OFICIAL</a>
     <a href="#apps">APLICATIVOS</a>
-    <a href="#licencas">LICENÇAS</a>
+    <a href="#licencas">LICENCAS</a>
 </div>
 
+<div class="conteudo">
+
 <div class="banner" id="inicio">
-    <span class="status">● CENTRAL ONLINE</span>
     <h2>BEM-VINDO AO DL GAMES!</h2>
     <p>
-        Tudo para seu PlayStation 3 em um só lugar.
-        Encontre ferramentas, instaladores, aplicativos
-        e conteúdos para seu console.
+        Tudo para seu PlayStation 3 em um so lugar.
+        Encontre instaladores, ferramentas, aplicativos
+        e conteudos para seu console.
     </p>
 </div>
 
-<div class="container">
+<div class="titulo" id="hen">01 - HEN E FIRMWARE</div>
 
-    <div class="section-title" id="hen">⚡ HEN E FIRMWARE</div>
+<div class="card">
+    <h3>HEN 4.92</h3>
+    <p>Instalador e firmware para versao 4.92.</p>
+    <a class="botao" href="http://ps3xploit.me/hen/installer/index.html">AUTO HEN 4.92</a>
+    <a class="botao2" href="https://github.com/Danielstoreps3/DLHEN/releases/download/DLHEN/HFW_4.92.1_PS3UPDAT.PUP">HFW 4.92</a>
+</div>
 
-    <div class="cards">
+<div class="card">
+    <h3>HEN 4.91</h3>
+    <p>Instalador e firmware para versao 4.91.</p>
+    <a class="botao" href="https://ps3addict.github.io/autohen/4.91/index.html">AUTO HEN 4.91</a>
+    <a class="botao2" href="https://danielstorevip.danielstorevip.workers.dev/5:/DESBLOQUEIO/HFW%204.91/PS3UPDAT.PUP">HFW 4.91</a>
+</div>
 
-        <div class="card">
-            <div class="card-icon">🛠️</div>
-            <span class="tag">VERSÃO 4.92</span>
-            <h3>HEN 4.92</h3>
-            <p>Instalador automático e firmware.</p>
-            <a class="btn" href="http://ps3xploit.me/hen/installer/index.html">AUTO HEN 4.92</a>
-            <a class="btn secondary" href="https://github.com/Danielstoreps3/DLHEN/releases/download/DLHEN/HFW_4.92.1_PS3UPDAT.PUP">BAIXAR HFW 4.92</a>
-        </div>
+<div class="card">
+    <h3>HEN 4.90</h3>
+    <p>Instalador e firmware para versao 4.90.</p>
+    <a class="botao" href="https://ps3addict.github.io/autohen/4.91/index.html">AUTO HEN INSTALLER</a>
+    <a class="botao2" href="https://danielstorevip.danielstorevip.workers.dev/5:/DESBLOQUEIO/HFW%204.90/PS3UPDAT.PUP">HFW 4.90</a>
+</div>
 
-        <div class="card">
-            <div class="card-icon">🔧</div>
-            <span class="tag">VERSÃO 4.91</span>
-            <h3>HEN 4.91</h3>
-            <p>Instalador e firmware para seu console.</p>
-            <a class="btn" href="https://ps3addict.github.io/autohen/4.91/index.html">AUTO HEN 4.91</a>
-            <a class="btn secondary" href="https://danielstorevip.danielstorevip.workers.dev/5:/DESBLOQUEIO/HFW%204.91/PS3UPDAT.PUP">BAIXAR HFW 4.91</a>
-        </div>
+<div class="limpar"></div>
 
-        <div class="card">
-            <div class="card-icon">⚙️</div>
-            <span class="tag">VERSÃO 4.90</span>
-            <h3>HEN 4.90</h3>
-            <p>Instalador e firmware para seu console.</p>
-            <a class="btn" href="https://ps3addict.github.io/autohen/4.91/index.html">AUTO HEN INSTALLER</a>
-            <a class="btn secondary" href="https://danielstorevip.danielstorevip.workers.dev/5:/DESBLOQUEIO/HFW%204.90/PS3UPDAT.PUP">BAIXAR HFW 4.90</a>
-        </div>
+<div class="titulo" id="ferramentas">02 - FERRAMENTAS</div>
 
-    </div>
+<div class="card">
+    <h3>DL FERRAMENTAS 1.5</h3>
+    <p>Ferramentas e correcoes para seu PS3.</p>
+    <a class="botao" href="https://github.com/5151">DL FERRAMENTAS 1.5</a>
+    <a class="botao2" href="https://github.com/5151">FIX 4.92</a>
+    <a class="botao2" href="https://github.com/5151">FIX 4.91</a>
+    <a class="botao2" href="https://github.com/5151">FIX 4.90</a>
+</div>
 
-    <div class="section-title" id="ferramentas">🔩 FERRAMENTAS</div>
+<div class="limpar"></div>
 
-    <div class="cards">
-        <div class="card">
-            <div class="card-icon">🔨</div>
-            <span class="tag">UTILITÁRIOS</span>
-            <h3>DL FERRAMENTAS 1.5</h3>
-            <p>Ferramentas e correções para PS3.</p>
-            <a class="btn" href="https://github.com/5151">DL FERRAMENTAS 1.5</a>
-            <a class="btn secondary" href="https://github.com/5151">FIX 4.92</a>
-            <a class="btn secondary" href="https://github.com/5151">FIX 4.91</a>
-            <a class="btn secondary" href="https://github.com/5151">FIX 4.90</a>
-        </div>
-    </div>
+<div class="titulo" id="oficial">03 - DL GAMES OFICIAL</div>
 
-    <div class="section-title" id="oficial">🌐 DL GAMES OFICIAL</div>
+<div class="card">
+    <h3>CANAIS OFICIAIS</h3>
+    <p>Acompanhe as novidades do DL GAMES.</p>
+    <a class="botao" href="https://dlgames1k.blogspot.com">BLOG OFICIAL</a>
+    <a class="botao2" href="https://archive.org/download/imagem-do-whats-app-de-2025-03-11-as-12.11.04-331a-0794/Imagem%20do%20WhatsApp%20de%202025-03-11%20%C3%A0%28s%29%2012.11.04_331a0794.jpg">WHATSAPP OFICIAL</a>
+    <a class="botao2" href="https://archive.org/download/dl-games-ytb-2025/Imagem%20do%20WhatsApp%20de%202025-03-11%20%C3%A0%28s%29%2012.03.32_70ca59eb.jpg">YOUTUBE OFICIAL</a>
+</div>
 
-    <div class="cards">
-        <div class="card">
-            <div class="card-icon">👑</div>
-            <span class="tag">CANAIS OFICIAIS</span>
-            <h3>NOSSAS REDES</h3>
-            <p>Acompanhe as novidades do DL GAMES.</p>
-            <a class="btn" href="https://dlgames1k.blogspot.com">BLOG OFICIAL</a>
-            <a class="btn secondary" href="https://archive.org/download/imagem-do-whats-app-de-2025-03-11-as-12.11.04-331a-0794/Imagem%20do%20WhatsApp%20de%202025-03-11%20%C3%A0%28s%29%2012.11.04_331a0794.jpg">WHATSAPP OFICIAL</a>
-            <a class="btn secondary" href="https://archive.org/download/dl-games-ytb-2025/Imagem%20do%20WhatsApp%20de%202025-03-11%20%C3%A0%28s%29%2012.03.32_70ca59eb.jpg">YOUTUBE OFICIAL</a>
-        </div>
-    </div>
+<div class="limpar"></div>
 
-    <div class="section-title" id="apps">🎮 APLICATIVOS PS3</div>
+<div class="titulo" id="apps">04 - APLICATIVOS PS3</div>
 
-    <input
-        class="search-box"
-        type="text"
-        id="pesquisa"
-        placeholder="Pesquisar aplicativo..."
-        onkeyup="filtrar()"
-    >
+<div class="card">
+    <h3>MULTIMAN</h3>
+    <p>Gerenciador de jogos e arquivos.</p>
+    <a class="botao" href="https://danielstorevip.danielstorevip.workers.dev/5:/DESBLOQUEIO/HOMEBREWS/MultiMAN_04.85.01_BASE_By_DLGAMESpkg">BAIXAR MULTIMAN</a>
+</div>
 
-    <div class="cards" id="lista">
+<div class="card">
+    <h3>WEBMAN MOD</h3>
+    <p>Gerenciamento e funcoes extras.</p>
+    <a class="botao" href="https://danielstorevip.danielstorevip.workers.dev/5:/DESBLOQUEIO/HOMEBREWS/webMAN_MOD_1.47.46_By_DLGAMES.pkg.436.v1.47.46b_brewology_com.pkg">BAIXAR WEBMAN</a>
+</div>
 
-        <div class="card">
-            <div class="card-icon">🎮</div>
-            <span class="tag">HOMEBREW</span>
-            <h3>MULTIMAN</h3>
-            <p>Gerenciador de jogos e arquivos.</p>
-            <a class="btn" href="https://danielstorevip.danielstorevip.workers.dev/5:/DESBLOQUEIO/HOMEBREWS/MultiMAN_04.85.01_BASE_By_DLGAMESpkg">BAIXAR MULTIMAN</a>
-        </div>
+<div class="card">
+    <h3>IRISMAN</h3>
+    <p>Gerenciador alternativo para PS3.</p>
+    <a class="botao" href="https://danielstorevip.danielstorevip.workers.dev/5:/DESBLOQUEIO/HOMEBREWS/IRISMAN_4.91.pkg.213.v4.91_By_DLGAMES.pkg">BAIXAR IRISMAN</a>
+</div>
 
-        <div class="card">
-            <div class="card-icon">🖥️</div>
-            <span class="tag">HOMEBREW</span>
-            <h3>WEBMAN MOD</h3>
-            <p>Gerenciamento e funções extras.</p>
-            <a class="btn" href="https://danielstorevip.danielstorevip.workers.dev/5:/DESBLOQUEIO/HOMEBREWS/webMAN_MOD_1.47.46_By_DLGAMES.pkg.436.v1.47.46b_brewology_com.pkg">BAIXAR WEBMAN</a>
-        </div>
+<div class="card">
+    <h3>APOLLO</h3>
+    <p>Ferramenta para gerenciamento de saves.</p>
+    <a class="botao" href="https://danielstorevip.danielstorevip.workers.dev/5:/DESBLOQUEIO/HOMEBREWS/APOLLO_By_DLGAMES.pkg">BAIXAR APOLLO</a>
+</div>
 
-        <div class="card">
-            <div class="card-icon">📁</div>
-            <span class="tag">HOMEBREW</span>
-            <h3>IRISMAN</h3>
-            <p>Gerenciador alternativo para PS3.</p>
-            <a class="btn" href="https://danielstorevip.danielstorevip.workers.dev/5:/DESBLOQUEIO/HOMEBREWS/IRISMAN_4.91.pkg.213.v4.91_By_DLGAMES.pkg">BAIXAR IRISMAN</a>
-        </div>
+<div class="card">
+    <h3>MOVIAN</h3>
+    <p>Aplicativo de midia para PS3.</p>
+    <a class="botao" href="https://danielstorevip.danielstorevip.workers.dev/5:/DESBLOQUEIO/HOMEBREWS/MOVIAN_M7-7.0.31By_DLGAMES.pkg">BAIXAR MOVIAN</a>
+</div>
 
-        <div class="card">
-            <div class="card-icon">🏆</div>
-            <span class="tag">HOMEBREW</span>
-            <h3>APOLLO</h3>
-            <p>Ferramenta para gerenciamento de saves.</p>
-            <a class="btn" href="https://danielstorevip.danielstorevip.workers.dev/5:/DESBLOQUEIO/HOMEBREWS/APOLLO_By_DLGAMES.pkg">BAIXAR APOLLO</a>
-        </div>
+<div class="card">
+    <h3>PKGI</h3>
+    <p>Aplicativo de catalogo para PS3.</p>
+    <a class="botao" href="https://danielstorevip.danielstorevip.workers.dev/5:/DESBLOQUEIO/HOMEBREWS/PKGI_By_DLGAMES.pkg">BAIXAR PKGI</a>
+</div>
 
-        <div class="card">
-            <div class="card-icon">🎬</div>
-            <span class="tag">HOMEBREW</span>
-            <h3>MOVIAN</h3>
-            <p>Aplicativo de mídia para PS3.</p>
-            <a class="btn" href="https://danielstorevip.danielstorevip.workers.dev/5:/DESBLOQUEIO/HOMEBREWS/MOVIAN_M7-7.0.31By_DLGAMES.pkg">BAIXAR MOVIAN</a>
-        </div>
+<div class="limpar"></div>
 
-        <div class="card">
-            <div class="card-icon">📦</div>
-            <span class="tag">HOMEBREW</span>
-            <h3>PKGI</h3>
-            <p>Aplicativo de catálogo para PS3.</p>
-            <a class="btn" href="https://danielstorevip.danielstorevip.workers.dev/5:/DESBLOQUEIO/HOMEBREWS/PKGI_By_DLGAMES.pkg">BAIXAR PKGI</a>
-        </div>
+<div class="titulo" id="licencas">05 - LICENCAS</div>
 
-    </div>
+<div class="card">
+    <h3>15 MIL LICENCAS</h3>
+    <p>Pacote de licencas para seu console.</p>
+    <a class="botao" href="https://danielstorevip.danielstorevip.workers.dev/5:/DESBLOQUEIO/HOMEBREWS/15MIL_Licencias.pkg">BAIXAR LICENCAS</a>
+</div>
 
-    <div class="empty" id="vazio">
-        NENHUM APLICATIVO ENCONTRADO.
-    </div>
-
-    <div class="section-title" id="licencas">🔑 LICENÇAS</div>
-
-    <div class="cards">
-        <div class="card">
-            <div class="card-icon">🔐</div>
-            <span class="tag">PACOTE</span>
-            <h3>15 MIL LICENÇAS</h3>
-            <p>Pacote de licenças para seu console.</p>
-            <a class="btn" href="https://danielstorevip.danielstorevip.workers.dev/5:/DESBLOQUEIO/HOMEBREWS/15MIL_Licencias.pkg">BAIXAR LICENÇAS</a>
-        </div>
-    </div>
+<div class="limpar"></div>
 
 </div>
 
-<footer>
+<div class="rodape">
     <strong>DL GAMES HEN</strong>
     <br><br>
     SEU PLAYSTATION 3, SEU UNIVERSO.
     <br><br>
-    © 2026 - TODOS OS DIREITOS RESERVADOS
-</footer>
-
-<script>
-function filtrar() {
-    var campo = document.getElementById("pesquisa");
-    var cards = document.getElementById("lista").getElementsByTagName("div");
-    var busca = campo.value.toLowerCase();
-    var encontrados = 0;
-
-    for (var i = 0; i < cards.length; i++) {
-        if (cards[i].className.indexOf("card") != -1) {
-            var nome = cards[i].innerText || cards[i].textContent;
-            if (nome.toLowerCase().indexOf(busca) != -1) {
-                cards[i].style.display = "inline-block";
-                encontrados++;
-            } else {
-                cards[i].style.display = "none";
-            }
-        }
-    }
-
-    document.getElementById("vazio").style.display =
-        encontrados == 0 ? "block" : "none";
-}
-</script>
+    COPYRIGHT 2026
+</div>
 
 </body>
 </html>
+
